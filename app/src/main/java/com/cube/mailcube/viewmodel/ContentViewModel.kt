@@ -6,6 +6,8 @@ import com.cube.mailcube.ui.recyclerview.item.Applicant
 
 internal class ContentViewModel : BaseViewModel() {
     val applicantList = MutableLiveData<List<Applicant>>()
+    val templateTitle = MutableLiveData<String>("제목")
+    val templateContent = MutableLiveData<String>("내용")
 
     init {
         applicantList.postValue(
