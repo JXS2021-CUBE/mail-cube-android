@@ -23,11 +23,12 @@ internal class ContentFragment : BaseFragment<ContentViewModel, FragmentContentB
 
     private fun setViewPager() {
         with(binding.viewPager) {
+            isUserInputEnabled = false
             adapter = ContentViewPagerAdapter(
                 requireActivity(),
                 viewModel
             )
-            TabLayoutMediator(binding.tabLayout, this) { tab, pos ->
+            TabLayoutMediator(binding.tabLayout, this, false, false) { tab, pos ->
                 tab.text = ContentMenu.valueOf(ContentMenu.values()[pos].name).menuName
             }.attach()
         }
