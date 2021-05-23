@@ -14,12 +14,12 @@ import kotlinx.coroutines.launch
 internal class ContentViewModel(
     private val repository: ContentRepository
 ) : BaseViewModel() {
-    val excelName = MutableLiveData<String>("엑셀파일 선택")
+    val excelName = MutableLiveData<String>("Select Excel-file")
     val excelList = MutableLiveData<List<Excel>>()
     val applicantList = MutableLiveData<List<Applicant>>()
     val templateList = MutableLiveData<List<Template>>()
     val template = MutableLiveData<Template>()
-    val templateName = MutableLiveData<String>("템플릿 선택")
+    val templateName = MutableLiveData<String>("Select Template")
     val isShowExcelDropdown = LiveEvent<Boolean>()
     val isShowTemplateDropdown = LiveEvent<Boolean>()
 
